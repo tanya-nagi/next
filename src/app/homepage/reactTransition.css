@@ -1,0 +1,71 @@
+/* react transition */
+.slides-enter {
+  opacity: 0;
+}
+.slides-enter-active {
+  opacity: 1;
+  transition: opacity 1500ms 500ms;
+}
+.slides-exit {
+  opacity: 1 !important;
+}
+.slides-exit-active {
+  opacity: 0;
+  transition: opacity 1100ms !important;
+}
+
+/* ripple  */
+
+.ripple-wrapper {
+  transform: scale(0);
+}
+.ripple-enter {
+  opacity: 0;
+  transform: scale(0);
+}
+.ripple-enter-active {
+  opacity: 0;
+  transform: scale(10);
+  transition-timing-function: ease-in-out;
+  transition: opacity 1500ms, transform 3000ms;
+}
+/* .ripple-wrapper .effect:nth-child(1) {
+  opacity: 1;
+  animation: ripple 2s ease;
+} */
+
+.ripple-exit {
+  opacity: 1;
+  transform: scale(0);
+}
+.ripple-exit-active {
+  opacity: 1;
+  transform: scale(0);
+  transition: opacity 500ms, transform 1000ms;
+}
+
+@keyframes ripple {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(10);
+  }
+}
+
+.hide-progress {
+  transform: translateX(-101%);
+  transition: all ease;
+}
+.progress-bar {
+  animation: progressBars 6s linear !important;
+}
+
+@keyframes progressBars {
+  0% {
+    transform: translateX(-101%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

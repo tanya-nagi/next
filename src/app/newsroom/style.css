@@ -1,0 +1,23 @@
+.bg-wrapper {
+  background: url("../../../public/assets/contact/bg-pattern.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 56%;
+  background-color: #00264e;
+}
+
+@media screen and (max-width: 1536px) {
+  .bg-wrapper {
+    background-size: 60%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .bg-wrapper {
+    background-size: 100%;
+  }
+}
+
+.form-container {
+  box-shadow: 0px 0px 15px 0px rgba(32, 103, 202, 0.3);
+}

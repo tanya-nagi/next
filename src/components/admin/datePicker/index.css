@@ -1,0 +1,13 @@
+.react-date-picker__wrapper {
+  border: none;
+}
+
+.react-date-picker__inputGroup__input {
+  border: none !important;
+  outline: none !important;
+}
+
+.react-date-picker__inputGroup__input
+  .react-date-picker__inputGroup__month::placeholder {
+  content: "MM";
+}
