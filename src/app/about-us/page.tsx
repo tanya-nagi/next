@@ -28,8 +28,9 @@ export default function CoDevelopment() {
       <Banner
         heading='Celebrating a <span class="font-playfairSemibold"> 150-year-old </span> odyssey<br class="lg:block hidden" />'
         subheading="Pioneering a trail of product innovation, process excellence & business impact"
-        image="/assets/coDevelopment/co-development-banner.png"
+        image=""
         classes=""
+        video="/assets/about-us/about-us.mp4"
       />
       <AboutBringing />
       Cardd

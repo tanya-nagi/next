@@ -6,9 +6,16 @@ type Props = {
   subheading?: string;
   image: string;
   classes?: string;
+  video?: string;
 };
 
-export default function Banner({ heading, subheading, image, classes }: Props) {
+export default function Banner({
+  heading,
+  subheading,
+  image,
+  classes,
+  video,
+}: Props) {
   return (
     <div
       className={`${classes} w-container blade-bottom-padding-lg lg:blade-bottom-padding-xl mt-10 xl:mt-14 2xl:mt-20`}
@@ -24,15 +31,28 @@ export default function Banner({ heading, subheading, image, classes }: Props) {
           </h6>
         ) : null}
       </div>
-      <div className="animate-fadeUp-800 w-full relative h-[200px] sm:h-[350px] md:h-fit mt-3 md:mt-6 xl:mt-10 ">
-        <Image
-          src={image}
-          alt={heading}
-          width={1280}
-          height={600}
-          className="w-full rounded-2xl h-full object-cover"
-        />
-      </div>
+      {!video ? (
+        <div className="animate-fadeUp-800 w-full relative h-[200px] sm:h-[350px] md:h-fit mt-3 md:mt-6 xl:mt-10 ">
+          <Image
+            src={image}
+            alt={heading}
+            width={1280}
+            height={600}
+            className="w-full rounded-2xl h-full object-cover"
+          />
+        </div>
+      ) : (
+        <div className="md:hidden block w-full gsap-fade-in">
+          <video
+            className="w-full h-full  object-cover"
+            autoPlay
+            loop
+            playsInline
+          >
+            <source src="/assets/about-us/banner.mp4" />
+          </video>
+        </div>
+      )}
     </div>
   );
 }
