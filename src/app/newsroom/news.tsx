@@ -1,41 +1,52 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 export default function News() {
+  const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+
   return (
     <section className="w-container blade-bottom-padding-lg">
       <div className="flex gap-6 justify-center">
-        {categories.map((item, index) => {
-          const i = index + 1;
-
-          return (
-            <button key={i} className="text-blue">
-              {item}
-            </button>
-          );
-        })}
+        {categories.map((item, index) => (
+          <button
+            key={index}
+            className={`${
+              selectedCategory === item
+                ? "text-blueDark underline"
+                : "text-blue" // Change to your light blue class
+            }`}
+            onClick={() => setSelectedCategory(item)}
+          >
+            {item}
+          </button>
+        ))}
       </div>
 
-      <div className="grid grid-cols-4 gap-5 mt-10">
-        {newsData.map((item, i) => {
-          const { title, description, image, id } = item;
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-10 px-4">
+        {newsData.map((item) => {
+          const { title, image, id } = item;
           return (
-            <div className="w-full h-auto" key={id}>
-              <div className="h-full relative ">
+            <div className="w-full h-auto relative group" key={id}>
+              <div className="relative mb-4 overflow-hidden rounded-[7.55px]">
                 <Image
                   src={image}
-                  height={400}
-                  width={400}
+                  height={297}
+                  width={516}
                   alt={title}
-                  className="w-full h-full object-cover rounded-xl overflow-hidden"
+                  className="w-full h-[297px] object-cover transition-transform duration-300 transform group-hover:scale-105"
                 />
-                <h6 className="text-sm px-5 py-2 bg-dark bg-opacity-5 backdrop-blur-2xl rounded-full font-worksansLight text-white absolute top-5 left-5">
-                  Case Study
-                </h6>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-12 h-12 bg-blue rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center">
+                    <span className="text-white text-sm font-semibold">
+                      View
+                    </span>
+                  </div>
+                </div>
               </div>
-              <h5 className="xl:mt-4 mt-3 font-light text-blueDark font-worksansMedium">
+              <h3 className="mt-2 font-worksansMedium text-blueDark text-left text-[14px] font-semibold leading-[26.43px]">
                 {title}
-              </h5>
+              </h3>
             </div>
           );
         })}
@@ -45,60 +56,43 @@ export default function News() {
 }
 
 const categories = [
-  "2030 Aspirations",
-  "Webinars",
   "Recent Updates",
-  "Awards & Recongitions",
-  "Events",
+  "Insights",
+  "Happenings",
+  "Awards & Recognitions",
 ];
 
 const newsData = [
   {
     id: 1,
-    category: "",
-    title: "news 1",
-    description: "descriptio 1",
-    image: "/assets/newsroom/",
-    data: "10 Mar 2024",
+    title: "The AAK Annual Report for 2023 is now launched",
+    image: "/assets/newsroom/img1.png",
   },
   {
     id: 2,
-    category: "",
-    title: "news 1",
-    description: "descriptio 1",
-    image: "/assets/newsroom/",
-    data: "10 Mar 2024",
+    title: "AAK opens new innovation centre in Antwerp, Belgium",
+    image: "/assets/newsroom/img2.png",
   },
   {
-    id: 2,
-    category: "",
-    title: "news 1",
-    description: "descriptio 1",
-    image: "/assets/newsroom/",
-    data: "10 Mar 2024",
+    id: 3,
+    title: "Now launched: AAK's 2023 Sustainability Report!",
+    image: "/assets/newsroom/img3.png",
   },
   {
-    id: 2,
-    category: "",
-    title: "news 1",
-    description: "descriptio 1",
-    image: "/assets/newsroom/",
-    data: "10 Mar 2024",
+    id: 4,
+    title:
+      "AAK in 6th place in a new sustainability report - Hållbara Bolag 2023",
+    image: "/assets/newsroom/img4.png",
   },
   {
-    id: 2,
-    category: "",
-    title: "news 1",
-    description: "descriptio 1",
-    image: "/assets/newsroom/",
-    data: "10 Mar 2024",
+    id: 5,
+    title: "AAK has received the EcoVadis silver medal",
+    image: "/assets/newsroom/img5.png",
   },
   {
-    id: 2,
-    category: "",
-    title: "news 1",
-    description: "descriptio 1",
-    image: "/assets/newsroom/",
-    data: "10 Mar 2024",
+    id: 6,
+    title:
+      "Is supercritical CO₂ a better solution for more sustainable production methods at AAK?",
+    image: "/assets/newsroom/img6.png",
   },
 ];
