@@ -31,7 +31,7 @@ export default function CoDevelopment() {
         subheading="Pioneering a trail of product innovation, process excellence & business impact"
         image=""
         classes=""
-        video="/assets/about-us/about-us.mp4"
+        video="/assets/about-us/banner.mp4"
       />
       <AboutBringing />
 
