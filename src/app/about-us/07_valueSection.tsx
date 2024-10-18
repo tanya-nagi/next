@@ -152,11 +152,13 @@ const ValueSection: React.FC = () => {
                 fontFamily="Arial, sans-serif"
                 fontSize="16"
                 fontWeight="bold"
+                cursor="pointer"
               >
                 <textPath
                   href="#innerCirclePath"
                   startOffset="18%"
                   textAnchor="middle"
+                  onClick={() => handleValueClick("Passionate")}
                 >
                   Passionate
                 </textPath>
@@ -168,11 +170,13 @@ const ValueSection: React.FC = () => {
                 fontFamily="Arial, sans-serif"
                 fontSize="16"
                 fontWeight="bold"
+                cursor="pointer"
               >
                 <textPath
                   href="#innerCirclePath"
                   startOffset="45%"
                   textAnchor="middle"
+                  onClick={() => handleValueClick("Agile")}
                 >
                   Agile
                 </textPath>
@@ -184,11 +188,13 @@ const ValueSection: React.FC = () => {
                 fontFamily="Arial, sans-serif"
                 fontSize="16"
                 fontWeight="bold"
+                cursor="pointer"
               >
                 <textPath
                   href="#innerCirclePath"
                   startOffset="69%"
                   textAnchor="middle"
+                  onClick={() => handleValueClick("Accountable")}
                 >
                   Accountable
                 </textPath>
@@ -200,11 +206,13 @@ const ValueSection: React.FC = () => {
                 fontFamily="Arial, sans-serif"
                 fontSize="16"
                 fontWeight="bold"
+                cursor="pointer"
               >
                 <textPath
                   href="#innerCirclePath"
                   startOffset="91%"
                   textAnchor="middle"
+                  onClick={() => handleValueClick("Collaborative")}
                 >
                   Collaborative
                 </textPath>
