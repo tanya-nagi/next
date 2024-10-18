@@ -6,10 +6,6 @@ export default function BetterBehavior() {
           Better Behaviors
         </h1>
 
-        {/* <p className="2xl:my-10 md:my-8 my-5 font-playfairSemibold text-center">
-          Our values are brought to life through our behaviors, guiding us{" "}
-          <br /> to make thoughtful decisions and take meaningful actions.
-        </p> */}
         <h6 className="text-sm md:text-lg text-blue mt-3 text-center">
           The AAK values in motion
         </h6>

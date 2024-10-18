@@ -35,13 +35,12 @@ export default function CoDevelopment() {
       />
       <AboutBringing />
 
-      <Card/>
+      <Card />
       <AAKGlobal />
       <Collborations />
       <StatesRow />
       <Map />
       <Evolution />
-      {/* creating problem and creating scrollbar horizontally */}
       <Behaviors />
       <ValueSection />
       <PathToPurpose />
