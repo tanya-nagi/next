@@ -1,19 +1,21 @@
 "use client";
 
 import React from "react";
-import OurTeam from "./02_ourTeam";
+import AboutBringing from "./01_aboutBringing";
 // import Journey from "./03_journey";
-import Approach from "./04_approach";
-import Evolution from "./evolution";
-import Collborations from "./05_collaboration";
-import Behaviors from "./05_plantToBrand";
-import LeadershipTeam from "./LeadershipTeam";
-import ValueSection from "./valueSection";
+import StatesRow from "./03_statesRow";
+import Evolution from "./05_evolution";
+import Collborations from "./02_collaboration";
+import Behaviors from "./06_betterBehavior";
+import LeadershipTeam from "./08_behavior";
+import ValueSection from "./07_valueSection";
 // import FAQ from "./06_faq";
 import Banner from "@molecules/banner";
 import Breadcrumb from "@components/atoms/breadcrumb";
 import useGSAP from "@hooks/useGsap";
-import ContactForm from "./contactForm";
+import AAKGlobal from "./03_aakGlobal";
+import Map from "./04_map";
+import PathToPurpose from "./09_ourPathToPurpose";
 
 export default function CoDevelopment() {
   useGSAP(".co-development-main-wrp");
@@ -29,23 +31,18 @@ export default function CoDevelopment() {
         image="/assets/coDevelopment/co-development-banner.png"
         classes=""
       />
-      <OurTeam />
+      <AboutBringing />
       Cardd
-      <OurTeam />
+      <AAKGlobal />
       <Collborations />
-      <Approach />
-      <Evolution/>
-      <Behaviors/>
-      <ValueSection/>
-      <LeadershipTeam/>
-
-
-
-
-
-      {/* 
-      <Journey />
-      <FAQ /> */}
+      <StatesRow />
+      <Map />
+      <Evolution />
+      {/* creating problem and creating scrollbar horizontally */}
+      <Behaviors />
+      <ValueSection />
+      <PathToPurpose />
+      <LeadershipTeam />
     </section>
   );
 }

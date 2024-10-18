@@ -32,6 +32,11 @@ const btnThemeClasses = {
   outline:
     "text-white bg-transparent border-white border font-worksans lg:py-[10px] py-2",
 };
+const noneBtnThemeClasses = {
+  white: "text-white hover:opacity-50 font-worksans lg:py-3 py-2",
+  blue: "text-white bg-blue font-worksans lg:py-3 py-2",
+  outline: "bg-transparent text-blue border-2 border-blue hover:bg-blue-100",
+};
 
 export function ButtonAtom({
   text,
@@ -97,6 +102,43 @@ export function ButtonLinkAtom({
           <path
             d="M1 0.993225L6 6.00721L1 11.0071"
             stroke="white"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : (
+        ""
+      )}
+    </Link>
+  );
+}
+export function ButtonLinkAtomWithTransparentColor({
+  text,
+  icon,
+  href,
+  size = "sm",
+  theme,
+  className,
+}: ButtonLinkType) {
+  return (
+    <Link
+      href={href}
+      className={` ${
+        className + " " + sizeClasses[size] + " " + noneBtnThemeClasses[theme]
+      } w-fit flex items-center gap-3 `} // Add `rounded-lg` for rounded corners
+    >
+      {text}
+      {icon ? (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-2"
+          viewBox="0 0 7 12"
+          fill="none"
+        >
+          <path
+            d="M1 0.993225L6 6.00721L1 11.0071"
+            stroke="blue" // Change stroke to blue if you want the icon arrow to also be blue
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"

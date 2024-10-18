@@ -10,13 +10,12 @@ import "swiper/css/free-mode";
 import "./style.css";
 import SectionTitles from "@components/molecules/sectionTitles";
 
-export default function OurTeam() {
+export default function AboutBringing() {
   return (
     <section className="co-development sm:blade-top-padding blade-bottom-padding-lg">
-
       <SectionTitles
         title='Bringing <span class="font-playfairMedium">product innovation</span> <br/>as a multi-oil, plant-based ingredient house'
-        subtitle='Harnessing global strengths'
+        subtitle="Harnessing global strengths"
         boldParagraphs={[
           "AAK India, South Asia, and Sub-Saharan Africa is constantly striving to set new standards in taste, nutrition, and economic viability of products, that people love to consume.",
         ]}
