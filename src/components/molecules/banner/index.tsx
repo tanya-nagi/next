@@ -42,14 +42,14 @@ export default function Banner({
           />
         </div>
       ) : (
-        <div className="md:hidden block w-full gsap-fade-in">
+        <div className="block w-full gsap-fade-in">
           <video
-            className="w-full h-full  object-cover"
+            className="w-full h-full  object-cover rounded-2xl mt-8"
             autoPlay
             loop
             playsInline
           >
-            <source src="/assets/about-us/banner.mp4" />
+            <source src={video} />
           </video>
         </div>
       )}
