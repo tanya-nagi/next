@@ -9,6 +9,7 @@ import Collborations from "./02_collaboration";
 import Behaviors from "./06_betterBehavior";
 import LeadershipTeam from "./08_behavior";
 import ValueSection from "./07_valueSection";
+import Card from "./Card";
 // import FAQ from "./06_faq";
 import Banner from "@molecules/banner";
 import Breadcrumb from "@components/atoms/breadcrumb";
@@ -32,7 +33,8 @@ export default function CoDevelopment() {
         classes=""
       />
       <AboutBringing />
-      Cardd
+
+      <Card/>
       <AAKGlobal />
       <Collborations />
       <StatesRow />

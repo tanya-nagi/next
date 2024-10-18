@@ -7,6 +7,13 @@
   background-color:  #2067CA;
   ;
 }
+.bg-wrapper-card {
+  background: url("../../../public/assets/contact/Ripple.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 70%;
+  ;
+}
 .circles-wrapper .circle {
   position: absolute;
   border-radius: 50%;

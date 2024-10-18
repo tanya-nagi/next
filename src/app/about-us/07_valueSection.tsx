@@ -16,7 +16,7 @@ interface ValuesData {
 // Data for each value (Passionate, Agile, etc.)
 const valuesData: ValuesData = {
   Passionate: {
-    title: "We are passionate about Making Better Happen™",
+    title: "We are <b> passionate </b>about <br/>Making Better Happen.",
     image: "/assets/about-us/passionate.png", // Update with actual image path
     points: [
       "Loving continuous improvement",
@@ -25,7 +25,7 @@ const valuesData: ValuesData = {
     ],
   },
   Agile: {
-    title: "We are agile in Making Better Happen™",
+    title: "We are <b> agile </b> by intent.",
     image: "/assets/about-us/agile.png", // Update with actual image path
     points: [
       "Adapting to changes quickly",
@@ -34,7 +34,7 @@ const valuesData: ValuesData = {
     ],
   },
   Accountable: {
-    title: "We are accountable for Making Better Happen™",
+    title: "We are <b>accountable </b>for <br/> for actions.",
     image: "/assets/about-us/accountable.png", // Update with actual image path
     points: [
       "Taking ownership",
@@ -43,7 +43,7 @@ const valuesData: ValuesData = {
     ],
   },
   Collaborative: {
-    title: "We are collaborative in Making Better Happen™",
+    title: "We are <b> collaborative</b> </br> by choice.",
     image: "/assets/about-us/collabrative.png", // Update with actual image path
     points: [
       "Working together",
@@ -65,16 +65,15 @@ const ValueSection: React.FC = () => {
   const { title, image, points } = valuesData[selectedValue];
 
   return (
-    <div className="flex flex-col lg:flex-row items-start gap-12 p-8 w-full gsap-fade-in">
+    <div className="flex flex-col lg:flex-row items-start gap-12 p-8 w-full gsap-fade-in px-[15rem]">
       {/* Left Navigation Menu */}
       <div className="w-full lg:w-1/3 flex flex-col space-y-6 gsap-fade-in">
         {Object.keys(valuesData).map((value) => (
           <button
             key={value}
             onClick={() => handleValueClick(value)}
-            className={`text-left text-blue text-xl ${
-              selectedValue === value ? "font-bold underline" : "text-gray"
-            } hover:underline cursor-pointer focus:outline-none`}
+            className={`text-left text-blue text-xl ${selectedValue === value ? "font-bold underline" : "text-gray"
+              } hover:underline cursor-pointer focus:outline-none`}
           >
             {value}
           </button>
@@ -84,7 +83,7 @@ const ValueSection: React.FC = () => {
         <div className="w-full lg:w-1/3 flex flex-col space-y-6">
           {/* Circular logo centered */}
           <div className="flex flex-col items-center">
-            <svg width="200" height="200" viewBox="0 0 300 300">
+            <svg width="250" height="250" viewBox="0 0 300 300">
               {/* Outer circle */}
               <circle
                 cx="150"
@@ -99,7 +98,7 @@ const ValueSection: React.FC = () => {
               <circle
                 cx="150"
                 cy="150"
-                r="100" // Increased radius for the inner circle
+                r="85" // Increased radius for the inner circle
                 fill="none"
                 stroke="#0078D4"
                 strokeWidth="2"
@@ -132,7 +131,7 @@ const ValueSection: React.FC = () => {
                 textAnchor="middle"
                 fill="#0078D4"
                 fontFamily="Arial, sans-serif"
-                fontSize="16"
+                fontSize="30"
                 dominantBaseline="middle"
               >
                 ™
@@ -150,13 +149,15 @@ const ValueSection: React.FC = () => {
               <text
                 fill="#0078D4"
                 fontFamily="Arial, sans-serif"
-                fontSize="16"
+                fontSize="25"
                 fontWeight="bold"
               >
                 <textPath
                   href="#innerCirclePath"
-                  startOffset="10%"
+                  startOffset="26%"
                   textAnchor="middle"
+                  onClick={() => handleValueClick("Passionate")}
+
                 >
                   Passionate
                 </textPath>
@@ -166,13 +167,14 @@ const ValueSection: React.FC = () => {
               <text
                 fill="#0078D4"
                 fontFamily="Arial, sans-serif"
-                fontSize="16"
+                fontSize="25"
                 fontWeight="bold"
               >
                 <textPath
                   href="#innerCirclePath"
-                  startOffset="35%"
+                  startOffset="50%"
                   textAnchor="middle"
+                  onClick={() => handleValueClick("Agile")}
                 >
                   Agile
                 </textPath>
@@ -182,13 +184,15 @@ const ValueSection: React.FC = () => {
               <text
                 fill="#0078D4"
                 fontFamily="Arial, sans-serif"
-                fontSize="16"
+                fontSize="25"
                 fontWeight="bold"
               >
                 <textPath
                   href="#innerCirclePath"
-                  startOffset="60%"
+                  startOffset="75%"
                   textAnchor="middle"
+                  onClick={() => handleValueClick("Accountable")}
+
                 >
                   Accountable
                 </textPath>
@@ -198,13 +202,15 @@ const ValueSection: React.FC = () => {
               <text
                 fill="#0078D4"
                 fontFamily="Arial, sans-serif"
-                fontSize="16"
+                fontSize="25"
                 fontWeight="bold"
               >
                 <textPath
                   href="#innerCirclePath"
-                  startOffset="85%"
+                  startOffset="100%"
                   textAnchor="middle"
+                  onClick={() => handleValueClick("Collaborative")}
+
                 >
                   Collaborative
                 </textPath>
@@ -217,13 +223,11 @@ const ValueSection: React.FC = () => {
       {/* Right Content Area */}
       <div className="w-full lg:w-2/3 gsap-fade-in">
         <div className="grid gap-3 ">
-          <h3 className="text-40 text-blue font-playfairSemibold gsap-fade-in">
-            <span className="font-playfairSemibold">{title}</span> <br /> AAK
-            India, South Asia, and Sub-Saharan Africa!
-          </h3>
-          <p className="text-blue text-lg gsap-fade-in">
-            Your co-development partners in Making Better Happen™
-          </p>
+        <h3 className="text-[40px] text-blue font-playfair gsap-fade-in">
+      <span dangerouslySetInnerHTML={{ __html: title }}></span>
+      <br />
+    </h3>
+
         </div>
 
         <div className="mt-6 gsap-fade-in">
