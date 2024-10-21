@@ -7,7 +7,7 @@ export default function Collaborations() {
     <section className="co-development blade-top-padding blade-bottom-padding-lg overflow-hidden">
       <SectionTitles
         title='<span class="font-playfairSemibold"></span>'
-        subtitle="The global footprint is vast, yet we intend to keep our approach deeply personal."
+        subtitle="The global footprint is vast, yet we intend to <br/> keep our approach deeply personal."
         subtitleClassname="text-2xl"
         paragraphs={[]}
         allignCenter
