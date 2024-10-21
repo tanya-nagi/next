@@ -126,7 +126,7 @@ export function ButtonLinkAtomWithTransparentColor({
       href={href}
       className={` ${
         className + " " + sizeClasses[size] + " " + noneBtnThemeClasses[theme]
-      } w-fit flex items-center gap-3 `} // Add `rounded-lg` for rounded corners
+      } w-fit flex items-center gap-2 p-2 `} // Add `rounded-lg` for rounded corners
     >
       {text}
       {icon ? (
