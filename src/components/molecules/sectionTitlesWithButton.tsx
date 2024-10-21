@@ -1,4 +1,5 @@
 import {
+  ButtonAtom,
   ButtonLinkAtom,
   ButtonLinkAtomWithTransparentColor,
 } from "@components/atoms/button";
@@ -6,8 +7,10 @@ import React from "react";
 
 type TitleSection = {
   allignCenter?: boolean;
+  paragraphsClass?: boolean;
   title: string;
   subtitle?: string;
+  buttonText?: string;
   subtitleClassname?: string;
   boldParagraphs?: string[];
   paragraphs: string[];
@@ -19,7 +22,9 @@ export default function SectionTitlesWithButton({
   subtitleClassname,
   boldParagraphs,
   paragraphs,
+  paragraphsClass,
   allignCenter,
+  buttonText,
 }: TitleSection) {
   return (
     <section>
@@ -43,28 +48,27 @@ export default function SectionTitlesWithButton({
           <div className="md:flex lg:gap-8 gap-4 flex-col lg:mt-14 sm:mt-8 mt-3 sm:w-6/12 w-full ml-auto">
             {paragraphs.map((paragraph, index) => {
               return (
-                <h5 key={index} className="max-w-lg  gsap-fade-in ">
-                  {paragraph}
-                </h5>
+                <h5 key={index} className="max-w-lg  gsap-fade-in " style={paragraphsClass ? { maxWidth: '35rem' } : {}} dangerouslySetInnerHTML={{ __html: paragraph }} />
+
               );
             })}
             {boldParagraphs
               ? boldParagraphs.map((paragraph, index) => {
-                  return (
-                    <h5
-                      key={index}
-                      className="max-w-lg mt-3 font-worksansMedium gsap-fade-in"
-                    >
-                      {paragraph}
-                    </h5>
-                  );
-                })
+                return (
+                  <h5
+                    key={index}
+                    className="max-w-lg mt-3 font-worksansMedium gsap-fade-in"
+                  >
+                    {paragraph}
+                  </h5>
+                );
+              })
               : ""}
-            <ButtonLinkAtomWithTransparentColor
-              className="mt-7 font-worksansLight"
+            <ButtonLinkAtom
+              className="mt-7 font-worksansLight bg-blue"
               href=""
-              text="AAK Global"
-              theme="outline"
+              text={"Join Us"}
+              theme="blue"
               icon
               size="lg"
             />
@@ -94,15 +98,15 @@ export default function SectionTitlesWithButton({
             })}
             {boldParagraphs
               ? boldParagraphs.map((paragraph, index) => {
-                  return (
-                    <h6
-                      key={index}
-                      className="font-worksansMedium text-center  gsap-fade-in"
-                    >
-                      {paragraph}
-                    </h6>
-                  );
-                })
+                return (
+                  <h6
+                    key={index}
+                    className="font-worksansMedium text-center  gsap-fade-in"
+                  >
+                    {paragraph}
+                  </h6>
+                );
+              })
               : ""}
           </div>
         </div>
