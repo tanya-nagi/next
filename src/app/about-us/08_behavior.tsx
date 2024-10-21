@@ -108,48 +108,54 @@ const LeadershipTeam: React.FC = () => {
       </div>
 
       {/* Scrolling Team Members with Custom Scrollbar */}
-      <div className="mt-12 overflow-x-auto custom-scrollbar">
-        <div className="flex space-x-8 whitespace-nowrap">
-          {leadershipTeam.map((member, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-sm text-center min-w-[250.26px] max-w-[250.26px] h-[380.38px]"
+      <div className="relative mt-12">
+  {/* Outer container with scrollbar */}
+  <div className="overflow-x-auto custom-scrollbar">
+    {/* Inner container with team cards */}
+    <div className="flex space-x-8 whitespace-nowrap">
+      {leadershipTeam.map((member, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-lg shadow-sm text-center min-w-[250.26px] max-w-[250.26px] h-[380.38px]"
+        >
+          {/* Team Member Image */}
+          <Image
+            src={member.image}
+            alt={member.name}
+            width={1000}
+            height={1000}
+            className="object-cover rounded-lg"
+          />
+
+          {/* Name and LinkedIn Icon */}
+          <div className="flex items-center justify-between mt-4">
+            <h3 className="text-xl font-playfairSemibold text-gray-800">
+              {member.name}
+            </h3>
+            <a
+              href={member.linkedInUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`LinkedIn profile of ${member.name}`}
             >
-              {/* Team Member Image */}
               <Image
-                src={member.image}
-                alt={member.name}
-                width={1000}
-                height={1000}
-                className="object-cover rounded-lg"
+                src="/assets/about-us/linkedIn.png" // Replace with actual LinkedIn icon path
+                alt="LinkedIn"
+                width={24} // Adjust width and height if needed
+                height={24}
+                className="w-6 h-6"
               />
+            </a>
+          </div>
 
-              {/* Name and LinkedIn Icon */}
-              <div className="flex items-center justify-between mt-4">
-                <h3 className="text-xl font-playfairSemibold text-gray-800">
-                  {member.name}
-                </h3>
-                <a
-                  href={member.linkedInUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src="/assets/about-us/linkedIn.png" // Replace with actual LinkedIn icon path
-                    alt="LinkedIn"
-                    width={24} // Adjust width and height if needed
-                    height={24}
-                    className="w-6 h-6"
-                  />
-                </a>
-              </div>
-
-              {/* Role */}
-              <p className="mt-2 font-worksans text-left px-0">{member.role}</p>
-            </div>
-          ))}
+          {/* Role */}
+          <p className="mt-2 font-worksans text-left px-0">{member.role}</p>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
+
     </div>
   );
 };
