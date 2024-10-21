@@ -72,23 +72,24 @@ const ValueSection: React.FC = () => {
           <button
             key={value}
             onClick={() => handleValueClick(value)}
-            className={`text-left text-blue text-xl ${selectedValue === value ? "font-bold underline" : "text-gray"
-              } hover:underline cursor-pointer focus:outline-none`}
+            className={`text-left text-blue text-xl ${
+              selectedValue === value ? "font-bold underline" : "text-gray"
+            } hover:underline cursor-pointer focus:outline-none`}
           >
             {value}
           </button>
         ))}
 
         {/* Circular logo */}
+
         <div className="w-full lg:w-1/3 flex flex-col space-y-6">
-          {/* Circular logo centered */}
           <div className="flex flex-col items-center">
             <svg width="250" height="250" viewBox="0 0 300 300">
               {/* Outer circle */}
               <circle
                 cx="150"
                 cy="150"
-                r="140" // Increased radius for the outer circle
+                r="140"
                 fill="none"
                 stroke="#0078D4"
                 strokeWidth="2"
@@ -98,7 +99,7 @@ const ValueSection: React.FC = () => {
               <circle
                 cx="150"
                 cy="150"
-                r="85" // Increased radius for the inner circle
+                r="85"
                 fill="none"
                 stroke="#0078D4"
                 strokeWidth="2"
@@ -107,13 +108,13 @@ const ValueSection: React.FC = () => {
               {/* Center text */}
               <text
                 x="150"
-                y="120" // Adjusted Y position for better centering
+                y="110"
                 textAnchor="middle"
                 fill="#0078D4"
                 fontFamily="Arial, sans-serif"
                 fontSize="18"
                 fontWeight="bold"
-                dominantBaseline="middle" // Centers the text vertically
+                dominantBaseline="middle"
               >
                 <tspan x="150" dy="0">
                   Making
@@ -127,7 +128,7 @@ const ValueSection: React.FC = () => {
               </text>
               <text
                 x="150"
-                y="195" // Adjusted Y position for centering
+                y="195"
                 textAnchor="middle"
                 fill="#0078D4"
                 fontFamily="Arial, sans-serif"
@@ -137,11 +138,11 @@ const ValueSection: React.FC = () => {
                 ™
               </text>
 
-              {/* Define paths for inner text */}
+              {/* Define paths for text */}
               <defs>
                 <path
                   id="innerCirclePath"
-                  d="M 150, 150 m -100, 0 a 100,100 0 1,1 200,0 a 100,100 0 1,1 -200,0"
+                  d="M 150,150 m -85,0 a 85,85 0 1,1 170,0 a 85,85 0 1,1 -170,0"
                 />
               </defs>
 
@@ -149,15 +150,15 @@ const ValueSection: React.FC = () => {
               <text
                 fill="#0078D4"
                 fontFamily="Arial, sans-serif"
-                fontSize="25"
+                fontSize="16"
                 fontWeight="bold"
+                cursor="pointer"
               >
                 <textPath
                   href="#innerCirclePath"
-                  startOffset="26%"
+                  startOffset="18%"
                   textAnchor="middle"
                   onClick={() => handleValueClick("Passionate")}
-
                 >
                   Passionate
                 </textPath>
@@ -167,12 +168,13 @@ const ValueSection: React.FC = () => {
               <text
                 fill="#0078D4"
                 fontFamily="Arial, sans-serif"
-                fontSize="25"
+                fontSize="16"
                 fontWeight="bold"
+                cursor="pointer"
               >
                 <textPath
                   href="#innerCirclePath"
-                  startOffset="50%"
+                  startOffset="45%"
                   textAnchor="middle"
                   onClick={() => handleValueClick("Agile")}
                 >
@@ -184,15 +186,15 @@ const ValueSection: React.FC = () => {
               <text
                 fill="#0078D4"
                 fontFamily="Arial, sans-serif"
-                fontSize="25"
+                fontSize="16"
                 fontWeight="bold"
+                cursor="pointer"
               >
                 <textPath
                   href="#innerCirclePath"
-                  startOffset="75%"
+                  startOffset="69%"
                   textAnchor="middle"
                   onClick={() => handleValueClick("Accountable")}
-
                 >
                   Accountable
                 </textPath>
@@ -202,15 +204,15 @@ const ValueSection: React.FC = () => {
               <text
                 fill="#0078D4"
                 fontFamily="Arial, sans-serif"
-                fontSize="25"
+                fontSize="16"
                 fontWeight="bold"
+                cursor="pointer"
               >
                 <textPath
                   href="#innerCirclePath"
-                  startOffset="100%"
+                  startOffset="91%"
                   textAnchor="middle"
                   onClick={() => handleValueClick("Collaborative")}
-
                 >
                   Collaborative
                 </textPath>
@@ -223,11 +225,10 @@ const ValueSection: React.FC = () => {
       {/* Right Content Area */}
       <div className="w-full lg:w-2/3 gsap-fade-in">
         <div className="grid gap-3 ">
-        <h3 className="text-[40px] text-blue font-playfair gsap-fade-in">
-      <span dangerouslySetInnerHTML={{ __html: title }}></span>
-      <br />
-    </h3>
-
+          <h3 className="text-[40px] text-blue font-playfair gsap-fade-in">
+            <span dangerouslySetInnerHTML={{ __html: title }}></span>
+            <br />
+          </h3>
         </div>
 
         <div className="mt-6 gsap-fade-in">
