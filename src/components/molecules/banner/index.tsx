@@ -47,6 +47,11 @@ export default function Banner({
             className="w-full h-full  object-cover rounded-2xl mt-8"
             autoPlay
             loop
+            style={{
+              width: "1651.94px",
+              height: "630px",
+              borderRadius: "2",
+              }}
             playsInline
           >
             <source src={video} />
