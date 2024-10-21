@@ -48,27 +48,31 @@ export default function SectionTitlesWithButton({
           <div className="md:flex lg:gap-8 gap-4 flex-col lg:mt-14 sm:mt-8 mt-3 sm:w-6/12 w-full ml-auto">
             {paragraphs.map((paragraph, index) => {
               return (
-                <h5 key={index} className="max-w-lg  gsap-fade-in " style={paragraphsClass ? { maxWidth: '35rem' } : {}} dangerouslySetInnerHTML={{ __html: paragraph }} />
-
+                <h5
+                  key={index}
+                  className="max-w-lg  gsap-fade-in "
+                  style={paragraphsClass ? { maxWidth: "35rem" } : {}}
+                  dangerouslySetInnerHTML={{ __html: paragraph }}
+                />
               );
             })}
             {boldParagraphs
               ? boldParagraphs.map((paragraph, index) => {
-                return (
-                  <h5
-                    key={index}
-                    className="max-w-lg mt-3 font-worksansMedium gsap-fade-in"
-                  >
-                    {paragraph}
-                  </h5>
-                );
-              })
+                  return (
+                    <h5
+                      key={index}
+                      className="max-w-lg mt-3 font-worksansMedium gsap-fade-in"
+                    >
+                      {paragraph}
+                    </h5>
+                  );
+                })
               : ""}
-            <ButtonLinkAtom
-              className="mt-7 font-worksansLight bg-blue"
+            <ButtonLinkAtomWithTransparentColor
+              className="mt-7 font-worksansLight"
               href=""
-              text={"Join Us"}
-              theme="blue"
+              text="AAK Global"
+              theme="outline"
               icon
               size="lg"
             />
@@ -98,15 +102,15 @@ export default function SectionTitlesWithButton({
             })}
             {boldParagraphs
               ? boldParagraphs.map((paragraph, index) => {
-                return (
-                  <h6
-                    key={index}
-                    className="font-worksansMedium text-center  gsap-fade-in"
-                  >
-                    {paragraph}
-                  </h6>
-                );
-              })
+                  return (
+                    <h6
+                      key={index}
+                      className="font-worksansMedium text-center  gsap-fade-in"
+                    >
+                      {paragraph}
+                    </h6>
+                  );
+                })
               : ""}
           </div>
         </div>
