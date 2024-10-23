@@ -11,7 +11,7 @@ export default function Contact() {
         route={{ title: "Home", link: "/" }}
         subroute={{ title: "Newsroom", link: "/newsroom" }}
       />
-      <div className="xl:min-h-[600px] w-container px-4 h-auto mx-auto blade-bottom-padding-lg lg:blade-bottom-padding-xl">
+      <div className="xl:min-h-[600px] w-container px-4 h-auto mx-auto">
         <Banner
           heading="<span class='font-worksansLight'> Get updated with our <span class='font-playfairSemibold'> latest insights <br/> and breakthroughs! </span></span>"
           image="/assets/newsroom/banner.jpg"

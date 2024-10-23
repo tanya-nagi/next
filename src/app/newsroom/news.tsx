@@ -7,15 +7,14 @@ export default function News() {
 
   return (
     <section className="w-container blade-bottom-padding-lg">
-      <div className="flex gap-6 justify-center">
+      <div className="flex gap-8 justify-center">
         {categories.map((item, index) => (
           <button
             key={index}
-            className={`${
-              selectedCategory === item
-                ? "text-blueDark underline"
-                : "text-blue" // Change to your light blue class
-            }`}
+            className={`${selectedCategory === item
+              ? "text-blueDark underline active-category"
+              : "text-blue inactive-category"
+              } category-button`}
             onClick={() => setSelectedCategory(item)}
           >
             {item}
@@ -23,12 +22,12 @@ export default function News() {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-10 px-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-10 px-4 gap-y-16">
         {newsData.map((item) => {
           const { title, image, id } = item;
           return (
             <div className="w-full h-auto relative group" key={id}>
-              <div className="relative mb-4 overflow-hidden rounded-[7.55px]">
+              <div className="relative mb-4 overflow-hidden rounded-[7.55px] imgCard">
                 <Image
                   src={image}
                   height={297}
@@ -44,9 +43,9 @@ export default function News() {
                   </div>
                 </div>
               </div>
-              <h3 className="mt-2 font-worksansMedium text-blueDark text-left text-[14px] font-semibold leading-[26.43px]">
-                {title}
+              <h3 className="mt-2 text-blueDark text-left text-[20px] font-semibold leading-[26.43px] font-['Work_Sans']" dangerouslySetInnerHTML={{ __html: title }}>
               </h3>
+
             </div>
           );
         })}
@@ -70,7 +69,7 @@ const newsData = [
   },
   {
     id: 2,
-    title: "AAK opens new innovation centre in Antwerp, Belgium",
+    title: "AAK opens new innovation centre in <br/> Antwerp, Belgium",
     image: "/assets/newsroom/img2.png",
   },
   {

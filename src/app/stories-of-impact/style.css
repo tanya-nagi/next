@@ -38,5 +38,14 @@
 .card {
     width: 372.65px;
     height: 372.65px;
-        gap: '0px';
+    gap: '0px';
+}
+
+.btnStyle {
+    width: '175px';
+    height: '48px';
+    top: '1352px';
+    left: '702px';
+    gap: '0px';
+
 }

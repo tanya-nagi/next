@@ -21,3 +21,48 @@
 .form-container {
   box-shadow: 0px 0px 15px 0px rgba(32, 103, 202, 0.3);
 }
+
+.category-button {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23.46px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  border: none; /* Remove button borders */
+  background: none; /* Remove button background */
+  cursor: pointer; /* Add pointer on hover */
+}
+
+.active-category {
+  text-decoration: underline; /* Underline for active tab */
+}
+
+.inactive-category {
+  text-decoration: none; /* No underline for inactive tabs */
+}
+
+.category-button {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23.46px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  border: none; /* Remove button borders */
+  background: none; /* Remove button background */
+  cursor: pointer; /* Add pointer on hover */
+}
+
+.active-category {
+  text-decoration: underline; /* Underline for active tab */
+  text-underline-offset: 15px; /* Add space between text and underline */
+}
+
+.inactive-category {
+  text-decoration: none; /* No underline for inactive tabs */
+}
+
+.imgCard img{
+  height: 100%;
+}

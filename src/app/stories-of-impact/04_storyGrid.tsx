@@ -76,14 +76,16 @@ const StoryGrid: React.FC = () => {
       </div>
       <div className="flex justify-center mb-6">
         <ButtonAtom
-          className="mt-7 font-worksansLight bg-blue"
+          className="mt-7 bg-blue custom-button-text btnStyle"
           onClick={handleLoadMore} // Use onClick handler
           text="Load more"
           theme="blue"
           icon
           size="base"
+
         />
       </div>
+
       )
     </div>
   );
