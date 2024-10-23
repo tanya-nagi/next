@@ -348,3 +348,158 @@
   scrollbar-width: none; /* Firefox */
 }
 
+
+/* Card Container: Align center, flex-wrap for mobile responsiveness */
+.card-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  /* gap: 1rem; */
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  background-color: white;
+  max-width: 513.3px;
+  height: 472.39px;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #E0E0E0;
+  padding: 2rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Card title styling */
+.card-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #00264E;
+  line-height: 36px;
+  margin-bottom: 1.5rem;
+}
+
+/* Card description styling */
+.card-description {
+  font-size: 18px;
+  font-weight: 400;
+  color: #00264E;
+  line-height: 26px;
+  position: absolute;
+  top: 18rem;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Small screens and mobile devices */
+@media (max-width: 600px) {
+  .card {
+      max-width: 100%;
+      height: auto;
+      padding: 1.5rem;
+  }
+
+  .card-title {
+      font-size: 22px;
+      line-height: 30px;
+  }
+
+  .card-description {
+      font-size: 16px;
+      line-height: 22px;
+      position: relative;
+      top: auto;
+  }
+}
+
+/* Tablets and medium devices */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .card {
+      max-width: 90%;
+      height: auto;
+      padding: 1.5rem;
+  }
+
+  .card-title {
+      font-size: 24px;
+      line-height: 32px;
+  }
+
+  .card-description {
+      font-size: 16px;
+      line-height: 24px;
+      position: relative;
+      top: auto;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+  .card-container {
+      flex-direction: row;
+      justify-content: center;
+      /* gap: 2rem; */
+  }
+
+  .card {
+      width: 513.3px;
+      height: 472.39px;
+  }
+
+  .card-title {
+      font-size: 28px;
+      line-height: 36px;
+  }
+
+  .card-description {
+      font-size: 18px;
+      line-height: 26px;
+      position: absolute;
+      top: 18rem;
+  }
+}
+
+/* Base styles for co-development section */
+.co-development {
+  padding: 2rem 1rem; /* Padding for small screens */
+}
+
+/* Styling for SectionTitles component if needed */
+.font-playfairMedium {
+  font-family: 'Playfair Display', serif; /* Ensure the right font is applied */
+  font-weight: 500;
+}
+
+/* Responsive styles */
+
+/* Small screens (mobile) */
+@media (max-width: 600px) {
+  .co-development {
+    margin-top: 1.5rem;
+      padding: 1.5rem 1rem; /* Adjust top/bottom padding for mobile */
+  }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .co-development {
+    margin-top: 1.5rem;
+
+      padding: 3rem 2rem; /* Larger padding for tablets */
+  }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1025px) {
+  .co-development {
+    margin-top: 1.5rem;
+      padding: 5rem 4rem; /* More spacious padding for desktops */
+  }
+}
+

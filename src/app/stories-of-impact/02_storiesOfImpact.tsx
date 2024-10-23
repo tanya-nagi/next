@@ -9,7 +9,7 @@ export default function StoriesOfImpact() {
         <h1 className=" text-blue font-playfairSemibold text-center ">
           Stories of Impact
         </h1>
-        <h6 className="text-sm md:text-lg text-blue mt-3 text-center">
+        <h6 className="animate-fadeUp-600 text-blue md:mt-3 mt-2 font-worksansMedium text-center">
           Inspiring positive change
         </h6>
 

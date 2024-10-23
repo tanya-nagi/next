@@ -20,17 +20,19 @@ const StoryCard: React.FC<StoryCardProps> = ({ imageUrl }) => {
 
   return (
     <div
-      className="relative bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105"
+      className="relative bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 card"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onMouseMove={handleMouseMove}
+
     >
-      <div className="relative w-full h-72">
+      <div className="relative w-full h-full">
         <Image
           src={imageUrl}
           alt={"storyImage"}
           layout="fill"
           objectFit="cover"
+          
         />
       </div>
 

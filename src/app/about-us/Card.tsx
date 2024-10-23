@@ -15,26 +15,39 @@ const data = [
     }
 ];
 
+// const Card = () => {
+//     return (
+//         <div className=" min-h-screen flex flex-col items-center justify-center px-4 py-8 md:flex-row md:justify-center md:gap-6 lg:gap-0 flex-wrap">
+//             {data.map(({ title, description }, key) => {
+//                 return (
+//                     <div 
+//                         key={key} 
+//                         className="relative bg-wrapper-card max-w-md bg-white rounded-[1rem] shadow-lg overflow-hidden p-8 border border-gray-200 w-[513.3px] h-[472.39px] flex flex-col justify-between mx-4 my-4 lg:my-0"
+//                     >
+//                         <h2 
+//                             className="text-[28px] font-semibold text-[#00264E] leading-[36px] tracking-tight mb-6 "
+//                             dangerouslySetInnerHTML={{ __html: title }}
+//                         />
+//                         <p className="text-[18px] font-normal text-[#00264E] leading-[26px] tracking-tight absolute top-[18rem]" dangerouslySetInnerHTML={{ __html: description }}/>
+//                     </div>
+//                 );
+//             })}
+//         </div>
+//     );
+// };
 const Card = () => {
     return (
-        <div className=" min-h-screen flex flex-col items-center justify-center px-4 py-8 md:flex-row md:justify-center md:gap-6 lg:gap-0 flex-wrap">
+        <div className="card-container">
             {data.map(({ title, description }, key) => {
                 return (
-                    <div 
-                        key={key} 
-                        className="relative bg-wrapper-card max-w-md bg-white rounded-[1rem] shadow-lg overflow-hidden p-8 border border-gray-200 w-[513.3px] h-[472.39px] flex flex-col justify-between mx-4 my-4 lg:my-0"
-                    >
-                        <h2 
-                            className="text-[28px] font-semibold text-[#00264E] leading-[36px] tracking-tight mb-6 "
-                            dangerouslySetInnerHTML={{ __html: title }}
-                        />
-                        <p className="text-[18px] font-normal text-[#00264E] leading-[26px] tracking-tight absolute top-[18rem]" dangerouslySetInnerHTML={{ __html: description }}/>
+                    <div key={key} className="card bg-wrapper-card">
+                        <h2 className="card-title" dangerouslySetInnerHTML={{ __html: title }} />
+                        <p className="card-description" dangerouslySetInnerHTML={{ __html: description }} />
                     </div>
                 );
             })}
         </div>
     );
 };
-
 
 export default Card;

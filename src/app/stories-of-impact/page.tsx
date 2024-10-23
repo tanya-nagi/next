@@ -10,6 +10,7 @@ import StoriesOfImpact from "./02_storiesOfImpact";
 import SectionOfStories from "./03_sectionofStories";
 import StoryGrid from "./04_storyGrid";
 
+
 export default function CoDevelopment() {
   useGSAP(".stories-of-impact-main-wrp");
   return (
@@ -19,7 +20,8 @@ export default function CoDevelopment() {
         subroute={{ title: "Stories of impact", link: "/stories-of-impact" }}
       />
       <Banner
-        heading='<span class="font-playfairSemibold"> Impactful narratives</span><br class="lg:block hidden" /> <span class="text-[20px]">Empowering change</span>'
+        heading='<span class="font-playfairSemibold"> Impactful narratives</span>'
+        subheading="Empowering change"
         image="/assets/coDevelopment/co-development-banner.png"
         classes=""
       />

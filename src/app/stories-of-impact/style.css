@@ -1,0 +1,42 @@
+.category-nav {
+    position: relative;
+    padding-bottom: 10px;
+    gap: 1.5rem;
+    /* opacity: .6; */
+}
+
+.category-link {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.11px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 10px;
+    transition: color 0.3s ease;
+    opacity: 1;
+    color: #0070f3ad;
+
+}
+
+.category-link.active-tab {
+    font-weight: bold;
+    color: #0070f3;
+}
+
+
+.underline {
+    position: absolute;
+    bottom: 15px;
+    height: 2px;
+    background-color: #0070f3;
+    transition: all .6s ease-in-out;
+}
+
+.card {
+    width: 372.65px;
+    height: 372.65px;
+        gap: '0px';
+}
