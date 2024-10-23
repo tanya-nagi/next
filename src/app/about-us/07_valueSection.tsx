@@ -89,17 +89,7 @@ const ValueSection: React.FC = () => {
               <circle
                 cx="150"
                 cy="150"
-                r="140"
-                fill="none"
-                stroke="#0078D4"
-                strokeWidth="2"
-              />
-
-              {/* Inner circle */}
-              <circle
-                cx="150"
-                cy="150"
-                r="85"
+                r="110"
                 fill="none"
                 stroke="#0078D4"
                 strokeWidth="2"
@@ -112,32 +102,31 @@ const ValueSection: React.FC = () => {
                 textAnchor="middle"
                 fill="#0078D4"
                 fontFamily="Arial, sans-serif"
-                fontSize="18"
+                fontSize="22"
                 fontWeight="bold"
                 dominantBaseline="middle"
               >
-                <tspan x="150" dy="0">
+                <tspan x="145" dy="18">
                   Making
                 </tspan>
-                <tspan x="150" dy="25">
+                <tspan x="145" dy="22">
                   Better
                 </tspan>
-                <tspan x="150" dy="25">
-                  Happen
+                <tspan x="155" dy="22">
+                  Happen™
                 </tspan>
               </text>
-              <text
+              {/* <text
                 x="150"
                 y="195"
                 textAnchor="middle"
                 fill="#0078D4"
                 fontFamily="Arial, sans-serif"
-                fontSize="30"
+                fontSize="15"
                 dominantBaseline="middle"
               >
                 ™
-              </text>
-
+              </text> */}
               {/* Define paths for text */}
               <defs>
                 <path
@@ -150,7 +139,7 @@ const ValueSection: React.FC = () => {
               <text
                 fill="#0078D4"
                 fontFamily="Arial, sans-serif"
-                fontSize="16"
+                fontSize="18"
                 fontWeight="bold"
                 cursor="pointer"
               >
@@ -168,13 +157,13 @@ const ValueSection: React.FC = () => {
               <text
                 fill="#0078D4"
                 fontFamily="Arial, sans-serif"
-                fontSize="16"
+                fontSize="18"
                 fontWeight="bold"
                 cursor="pointer"
               >
                 <textPath
                   href="#innerCirclePath"
-                  startOffset="45%"
+                  startOffset="40%"
                   textAnchor="middle"
                   onClick={() => handleValueClick("Agile")}
                 >
@@ -186,13 +175,13 @@ const ValueSection: React.FC = () => {
               <text
                 fill="#0078D4"
                 fontFamily="Arial, sans-serif"
-                fontSize="16"
+                fontSize="18"
                 fontWeight="bold"
                 cursor="pointer"
               >
                 <textPath
                   href="#innerCirclePath"
-                  startOffset="69%"
+                  startOffset="62%"
                   textAnchor="middle"
                   onClick={() => handleValueClick("Accountable")}
                 >
@@ -204,19 +193,28 @@ const ValueSection: React.FC = () => {
               <text
                 fill="#0078D4"
                 fontFamily="Arial, sans-serif"
-                fontSize="16"
+                fontSize="18"
                 fontWeight="bold"
                 cursor="pointer"
               >
                 <textPath
                   href="#innerCirclePath"
-                  startOffset="91%"
+                  startOffset="90%"
                   textAnchor="middle"
                   onClick={() => handleValueClick("Collaborative")}
                 >
                   Collaborative
                 </textPath>
               </text>
+              {/* Inner circle */}
+              <circle
+                cx="150"
+                cy="150"
+                r="68"
+                fill="none"
+                stroke="#0078D4"
+                strokeWidth="2"
+              />
             </svg>
           </div>
         </div>
