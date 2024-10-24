@@ -66,3 +66,38 @@
 .imgCard img{
   height: 100%;
 }
+
+/* Default button styles */
+.category-button {
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+}
+
+/* Media query for tablets and smaller screens */
+@media (max-width: 768px) {
+  .flex {
+    gap: 4px; /* Reduce gap between buttons */
+  }
+
+  .category-button {
+    font-size: 0.875rem; /* Smaller font size for better fit */
+    padding: 0.4rem 0.75rem;
+  }
+
+  .active-category {
+    text-underline-offset: 2px; /* Adjust underline distance on smaller screens */
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+  .flex {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 8px; /* Adjust gap for vertical stack */
+  }
+
+  .category-button {
+    font-size: 0.75rem; /* Smaller font size for mobile */
+    padding: 0.3rem 0.5rem;
+  }
+}

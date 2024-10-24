@@ -7,13 +7,13 @@ export default function News() {
 
   return (
     <section className="w-container blade-bottom-padding-lg">
-      <div className="flex gap-8 justify-center">
+      <div className="flex gap-8 justify-center flex-wrap">
         {categories.map((item, index) => (
           <button
             key={index}
             className={`${selectedCategory === item
-              ? "text-blueDark underline active-category"
-              : "text-blue inactive-category"
+                ? "text-blueDark underline active-category"
+                : "text-blue inactive-category"
               } category-button`}
             onClick={() => setSelectedCategory(item)}
           >
@@ -21,6 +21,7 @@ export default function News() {
           </button>
         ))}
       </div>
+
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-10 px-4 gap-y-16">
         {newsData.map((item) => {
