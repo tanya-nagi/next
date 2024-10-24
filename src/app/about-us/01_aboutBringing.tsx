@@ -12,7 +12,7 @@ import SectionTitles from "@components/molecules/sectionTitles";
 
 export default function AboutBringing() {
   return (
-    <section className="co-development sm:blade-top-padding blade-bottom-padding-lg">
+    <section className="co-development ">
       <SectionTitles
         title='Bringing <span class="font-playfairMedium">product innovation</span> <br/>as a multi-oil, plant-based ingredient house'
         subtitle="Harnessing global strengths"

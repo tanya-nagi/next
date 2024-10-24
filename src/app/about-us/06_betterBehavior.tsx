@@ -7,7 +7,7 @@ export default function BetterBehavior() {
         </h1>
 
         <h6 className="text-sm md:text-lg text-blue mt-3 text-center">
-          The AAK values in motion
+        <b>  The AAK values in motion</b>
         </h6>
         <h6 className="font-worksansMedium text-center mt-7 gsap-fade-in">
           Our values are brought to life through our behaviors, guiding us{" "}

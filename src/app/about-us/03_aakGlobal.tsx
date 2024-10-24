@@ -6,7 +6,7 @@ import SectionTitlesWithButton from "@components/molecules/sectionTitlesWithButt
 
 export default function AAKGlobal() {
   return (
-    <section className="co-development sm:blade-top-padding ">
+    <section className="co-development sm:blade-top-padding mt-20 ">
       <SectionTitlesWithButton
         title="AAK Global"
         subtitle="Making Better Happen™ worldwide"
