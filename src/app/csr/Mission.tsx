@@ -113,10 +113,10 @@ export default function TreePlantationDrive() {
 
 
 const Tabs = ({ tabData, index }: any) => {
-  console.log("tabDatatabData", tabData)
+
   const [isPlaying, setIsPlaying] = React.useState(true);
 
-  const animationDuration = 8650; // 10 seconds
+  const animationDuration = Infinity; // 10 seconds
 
   React.useEffect(() => {
     let timer: NodeJS.Timeout;
@@ -160,13 +160,13 @@ const Tabs = ({ tabData, index }: any) => {
 
           <div className="grid gap-6 mb-6">
             <div
-              className={`scroll-container ${data?.images.lenght > 1 ? 'w-full flex justify-center' : ''}`}
+              className={`scroll-container ${data?.images.length > 1 ? 'w-full flex justify-center' : ''}`}
               onMouseEnter={() => {
                 setIsPlaying(true);
               }}
             >
-              <div className={`scroll-content ${isPlaying && data?.images.lenght > 1 ? 'play-animation' : ''}`}>
-                {data?.images.lenght > 1 ? data?.images?.map((src: any, key: any) => (
+              <div className={`scroll-content ${isPlaying && data?.images.length > 1 ? 'play-animation' : 'w-[100%]'}`}>
+                {data?.images.length > 1 ? data?.images?.map((src: any, key: any) => (
                   <ImageCard
                     imageUrl={`${src}`}
                     altText={`Sample Image ${key + 1}`}
@@ -185,7 +185,7 @@ const Tabs = ({ tabData, index }: any) => {
                     imageUrl={`${data?.images[0]}`}
                     altText={`Sample Image`}
                     style={{
-                      width: '820px',
+                      width: data?.images.length > 1 ?'820px':"77%",
                       height: '471px',
                       left: '266px',
                       borderRadius: '8px 0px 0px 0px',
