@@ -49,3 +49,47 @@
     gap: '0px';
 
 }
+
+/* style.css */
+
+/* Ensure buttons are flexible */
+
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .category-nav {
+      padding: 0 1rem;
+      /* flex-wrap: wrap; */
+    }
+  
+    .category-nav a {
+      font-size: 0.875rem; /* Smaller font size on smaller screens */
+      padding: 0.25rem 0.5rem;
+    }
+  
+    .underline {
+      height: 2px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .category-nav {
+      padding: 0 0.5rem;
+      flex-direction: column; /* Stack the categories vertically */
+      align-items: center;
+    }
+  
+    .category-nav a {
+      font-size: 0.75rem; /* Even smaller font size for mobile */
+      padding: 0.5rem 0;
+    }
+  
+    .underline {
+      height: 1px;
+      display: none;
+    }
+    .card{
+        width: 346.65px;
+    }
+  }
+  
