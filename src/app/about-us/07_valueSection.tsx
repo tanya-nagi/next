@@ -65,9 +65,9 @@ const ValueSection: React.FC = () => {
   const { title, image, points } = valuesData[selectedValue];
 
   return (
-<div className="flex flex-col lg:flex-row items-start gap-12 p-8 w-full gsap-fade-in px-4 lg:px-[15rem]">
+<div className="flex flex-col lg:flex-row items-start gap-12 p-8 w-full gsap-fade-in px-4 lg:px-[15rem] plr-none">
   {/* Left Navigation Menu */}
-  <div className="w-full lg:w-1/3 flex flex-col space-y-6 gsap-fade-in">
+  <div className="w-full lg:w-1/3 flex flex-col space-y-6 gsap-fade-in heading">
     {Object.keys(valuesData).map((value) => (
       <button
         key={value}
@@ -82,7 +82,7 @@ const ValueSection: React.FC = () => {
 
     {/* Circular logo */}
     <div className="w-full lg:w-1/3 flex flex-col space-y-6">
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center circleclick">
         <svg width="200" height="200" viewBox="0 0 300 300" className="w-full max-w-xs lg:max-w-none">
           {/* Outer circle */}
           <circle

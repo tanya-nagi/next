@@ -56,7 +56,7 @@ export default function Evolution() {
               blade-bottom-padding-lg"
           >
             <div className="w-full overflow-hidden">
-              <div className="flex 2xl:col-span-8 xl:col-span-9 md:col-span-11 col-span-12 md:px-0 px-3 relative left-[9rem]">
+              <div className="flex 2xl:col-span-8 xl:col-span-9 md:col-span-11 col-span-12 md:px-0 px-3 relative left-[9rem] blueDart">
                 <div className="flex-1">
                   <h2 className="text-white font-playfair font-medium">
                     Tracing the evolution
@@ -97,7 +97,7 @@ export default function Evolution() {
               </div>
 
               {/* Scrollable Timeline without Visible Scrollbar */}
-              <div className="relative  overflow-x-auto mt-12 hide-scroll-bar scroll-smooth snap-x snap-mandatory h-full left-[9rem]">
+              <div className="relative  overflow-x-auto mt-12 hide-scroll-bar scroll-smooth snap-x snap-mandatory h-full left-[9rem] blueDart">
                 {/* Timeline Horizontal Line */}
                 <div className="absolute left-0 w-[3000px] h-[0.09rem] bg-white top-[14rem]"></div>
 
@@ -141,12 +141,12 @@ export default function Evolution() {
 
                       <div className="w-4 h-4 bg-white rounded-full mb-2 mx-auto absolute top-[13.65rem]"></div>
 
-                      <p className="text-[24px] font-bold text-left text-[#FFFFFF] leading-[40px] tracking-[-0.03em] mb-2">
+                      <p className="text-[24px] font-bold text-left text-[#FFFFFF] leading-[40px] tracking-[-0.03em] mb-2 r-t-8">
                         {item.year}
                       </p>
 
                       <p
-                        className="text-[24px] font-normal text-[#FFFFFF] leading-[32px] tracking-[-0.03em] w-[251px] h-[64px] mx-auto text-start"
+                        className="text-[24px] font-normal text-[#FFFFFF] leading-[32px] tracking-[-0.03em] w-[251px] h-[64px] mx-auto text-start textCorrection r-t-8"
                         dangerouslySetInnerHTML={{ __html: item.description }}
                       />
                     </div>

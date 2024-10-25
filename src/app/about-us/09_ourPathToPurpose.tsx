@@ -3,7 +3,7 @@ import React from "react";
 
 const PathToPurpose = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-start justify-between bg-white py-24 lg:pl-[15rem] px-6">
+    <div className="flex flex-col lg:flex-row items-start justify-between bg-white py-24 lg:pl-[15rem] px-6 pt-none">
     {/* Left Side: Title */}
     <div className="w-full lg:w-1/3 mb-10 lg:mb-0">
       <h1 className="text-5xl lg:text-8xl font-bold text-blue font-playfairBold leading-tight">

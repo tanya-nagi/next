@@ -400,9 +400,19 @@
 
 /* Small screens and mobile devices */
 @media (max-width: 600px) {
+  .co-development {
+    margin-top: 1.5rem;
+      /* padding: 1.5rem 1rem; */
+      /* padding-top: 0; */
+  }
+  .vertical-line{
+    height: 6rem!important;
+  }
   .card {
       max-width: 100%;
-      height: auto;
+      /* height: auto; */
+      height: 22rem;
+      width: 22rem;
       padding: 1.5rem;
   }
 
@@ -417,14 +427,52 @@
       position: relative;
       top: auto;
   }
+  .blueDart{
+    left: 5px!important;
+   }
+   .textCorrection{
+    font-size: 19px;
+   }
+   .r-t-8{
+    position: relative;
+    top: -11px;
+   }
+   .bg-wrapper{
+    height: 45rem !important;
+   }
+
+   .circleclick{
+    display: none;
+   }
+   .heading{
+    flex-direction: row !important;
+    justify-content: center;
+   }
+   .heading button{
+    font-size: 16px;
+    margin-top: 0 !important;
+    padding: 0 6px;
+  }
+  .plr-none{
+     display: grid !important;
+     grid-column: 1 / 5 !important;
+    padding-left: 0;
+    padding-right: 0;
+   }
+   .pt-none{
+    padding-top: 0;
+    padding-bottom: 0;
+   }
 }
 
 /* Tablets and medium devices */
 @media (min-width: 601px) and (max-width: 1024px) {
   .card {
       max-width: 90%;
-      height: auto;
+      /* height: auto; */
       padding: 1.5rem;
+      height: 22rem;
+      width: 22rem;
   }
 
   .card-title {
@@ -438,6 +486,28 @@
       position: relative;
       top: auto;
   }
+  .circleclick{
+    display: none;
+   }
+   .heading{
+    flex-direction: row !important;
+    justify-content: center;
+   }
+   .heading button{
+    /* font-size: 16px; */
+    margin-top: 0 !important;
+    padding: 0 20px;
+  }
+  .plr-none{
+     display: grid !important;
+     grid-column: 1 / 7 !important;
+    padding-left: 0;
+    padding-right: 0;
+   }
+   .pt-none{
+    padding-top: 0;
+    padding-bottom: 0;
+   }
 }
 
 /* Large screens */
@@ -479,14 +549,7 @@
 
 /* Responsive styles */
 
-/* Small screens (mobile) */
-@media (max-width: 600px) {
-  .co-development {
-    margin-top: 1.5rem;
-      /* padding: 1.5rem 1rem; */
-      /* padding-top: 0; */
-  }
-}
+
 
 /* Medium screens (tablets) */
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -496,6 +559,26 @@
       /* padding: 3rem 2rem; /* Larger padding for tablets */
       padding-top: 0;
 
+  }
+  /* .vertical-line{
+    height: 7.1rem;
+  } */
+   .blueDart{
+    left: 5px!important;
+   }
+   .textCorrection{
+    font-size: 19px;
+   }
+
+}
+@media (min-width: 1495px) and (max-width: 1550px) {
+ .vertical-line{
+    height: 6.8rem!important;
+  }
+}
+@media (min-width: 601px) and (max-width: 1494px) {
+ .vertical-line{
+    height: 6.4rem!important;
   }
 }
 
@@ -508,6 +591,9 @@
   padding-bo:0; */
 
   }
+  /* .blueDart{
+    left: 0!important;
+   } */
 }
 
 
