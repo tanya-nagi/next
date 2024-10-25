@@ -28,7 +28,7 @@ export default function CoDevelopment() {
     <section className="co-development-main-wrp">
       <Breadcrumb
         route={{ title: "Home", link: "/" }}
-        subroute={{ title: "About us", link: "/about-us" }}
+        subroute={{ title: "CSR", link: "/csr" }}
       />
       <Banner
         heading='Social initiatives and community engagement'

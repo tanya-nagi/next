@@ -136,7 +136,7 @@ const Tabs = ({ tabData, index }: any) => {
   }, [isPlaying]);
   return <div className="mx-auto p-4 font-sans">
     <nav className="md:flex space-x-6 text-sm mb-6 sticky top-[-1px] bg-white z-10 w-full h-[89px] items-center ">
-      <div className="item flex space-x-6 h-[40px] pl-72 ">
+      <div className="item flex space-x-6 h-[40px] pl-72  pl-none">
         <a href="#" className={`custom-link text-blue-600 ${index === 0 ? "border-b-[3px] border-blue-600 pb-2" : ""}`}>
           <span> Environmental stewardship</span>
         </a>
@@ -154,7 +154,7 @@ const Tabs = ({ tabData, index }: any) => {
     {
       tabData.map((data: any) => {
         return <>
-          <div className="grid w-full pl-72">
+          <div className="grid w-full pl-72 pl-none ">
             <h1 className="text-2xl font-bold mb-6">{data.title}</h1>
           </div>
 
@@ -162,10 +162,10 @@ const Tabs = ({ tabData, index }: any) => {
             <div
               className={`scroll-container ${data?.images.length > 1 ? 'w-full flex justify-center' : ''}`}
               onMouseEnter={() => {
-                setIsPlaying(true);
+                // setIsPlaying(true);
               }}
             >
-              <div className={`scroll-content ${isPlaying && data?.images.length > 1 ? 'play-animation' : 'w-[100%]'}`}>
+              <div className={`scroll-content images ${data?.images.length > 1 ? 'play-animation' : 'w-full'}`}>
                 {data?.images.length > 1 ? data?.images?.map((src: any, key: any) => (
                   <ImageCard
                     imageUrl={`${src}`}
@@ -200,7 +200,7 @@ const Tabs = ({ tabData, index }: any) => {
           </div>
 
           <section className="relative blade-top-padding-lg blade-bottom-padding">
-            <div className="flex relative w-container pl-[160px]">
+            <div className="flex relative w-container pl-[160px] pl-none">
               <div className="md:flex-1 space-y-3">
                 <p className="custom-paragraph">Project</p>
                 <div>
