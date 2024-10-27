@@ -15,7 +15,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ imageUrl, altText ,style}) => {
       <img
         src={imageUrl}
         alt={altText}
-        className="w-full h-full object-cover rounded-tl-[15.82px]"
+        className="w-full h-full rounded-tl-[15.82px]"
       />
     </div>
   );

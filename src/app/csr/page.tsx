@@ -39,10 +39,9 @@ export default function CoDevelopment() {
       />
       <CommunityEngagement />
       <AboutBringing />
-      
       <Mission/>
       <Goals/>
-      <AAKGlobal />
+      <AAKGlobal /> 
 
       
     </section>

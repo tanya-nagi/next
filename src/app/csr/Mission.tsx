@@ -86,6 +86,16 @@ export default function TreePlantationDrive() {
 
   return (
     <>
+      <div className="flex flex-col items-center justify-center bg-white p-4">
+        <h1 className="font-serif text-[48px] font-semibold leading-[58px] tracking-tight text-[#2067CA] bg-white mb-4 text-center">
+          Pragati Mission
+        </h1>
+
+
+        <p className="font-sans text-[20px] font-medium leading-[23.46px] tracking-tight text-[#2067CA] text-left">
+          Driving progress, transforming lives
+        </p>
+      </div>
       <section className="co-development sm:blade-top-padding blade-bottom-padding-lg">
         <SectionTitles
           title=""
@@ -137,13 +147,13 @@ const Tabs = ({ tabData, index }: any) => {
   return <div className="mx-auto p-4 font-sans">
     <nav className="md:flex space-x-6 text-sm mb-6 sticky top-[-1px] bg-white z-10 w-full h-[89px] items-center ">
       <div className="item flex space-x-6 h-[40px] pl-72  pl-none">
-        <a href="#" className={`custom-link text-blue-600 ${index === 0 ? "border-b-[3px] border-blue-600 pb-2" : ""}`}>
+        <a className={`custom-link text-blue-600 ${index === 0 ? "border-b-[3px] border-blue-600 pb-2 borderUnderline" : ""}`}>
           <span> Environmental stewardship</span>
         </a>
-        <a href="#" className={`custom-link text-blue-600 ${index === 1 ? "border-b-[3px] border-blue-600 pb-2" : ""}`}>
+        <a className={`custom-link text-blue-600 ${index === 1 ? "border-b-[3px] border-blue-600 pb-2 borderUnderline" : ""}`}>
           <span>Community engagement and enrichment</span>
         </a>
-        <a href="#" className={`custom-link text-blue-600 ${index === 2 ? "border-b-[3px] border-blue-600 pb-2" : ""}`}>
+        <a className={`custom-link text-blue-600 ${index === 2 ? "border-b-[3px] border-blue-600 pb-2 borderUnderline" : ""}`}>
           <span> Food security</span>
         </a>
       </div>
@@ -165,7 +175,7 @@ const Tabs = ({ tabData, index }: any) => {
                 // setIsPlaying(true);
               }}
             >
-              <div className={`scroll-content images ${data?.images.length > 1 ? 'play-animation' : 'w-full'}`}>
+              <div className={`scroll-content images objectFit ${data?.images.length > 1 ? 'play-animation' : 'w-full'}`}>
                 {data?.images.length > 1 ? data?.images?.map((src: any, key: any) => (
                   <ImageCard
                     imageUrl={`${src}`}
@@ -173,33 +183,33 @@ const Tabs = ({ tabData, index }: any) => {
                     key={key}
                     style={{
                       width: '820px',
-                      height: '471px',
+                      height: '430px',
                       left: '266px',
-                      borderRadius: '8px 0px 0px 0px',
+                      borderRadius: '8px',
                       marginRight: '3rem'
                     }}
                   />
                 )) : <>
-                <div className="w-full">
-                  <ImageCard
-                    imageUrl={`${data?.images[0]}`}
-                    altText={`Sample Image`}
-                    style={{
-                      width: data?.images.length > 1 ?'820px':"77%",
-                      height: '471px',
-                      left: '266px',
-                      borderRadius: '8px 0px 0px 0px',
-                      marginRight: '3rem'
-                    }}
-                  />
+                  <div className="w-full objectFit">
+                    <ImageCard
+                      imageUrl={`${data?.images[0]}`}
+                      altText={`Sample Image`}
+                      style={{
+                        width: data?.images.length > 1 ? '820px' : "77%",
+                        height: '430px',
+                        left: '266px',
+                        borderRadius: '8px',
+                        marginRight: '3rem'
+                      }}
+                    />
 
-                </div>
+                  </div>
                 </>}
               </div>
             </div>
           </div>
 
-          <section className="relative blade-top-padding-lg blade-bottom-padding">
+          <section className="relative  blade-bottom-padding">
             <div className="flex relative w-container pl-[160px] pl-none">
               <div className="md:flex-1 space-y-3">
                 <p className="custom-paragraph">Project</p>
@@ -221,7 +231,7 @@ const Tabs = ({ tabData, index }: any) => {
                       {data?.locationArray?.map((text: any, index: any) => (
                         <h6
                           key={index}
-                          className={`gsap-fade-in ${index < textArray.length - 1 ? 'border-b' : ''} py-[20px]`} // Apply border-b class conditionally
+                          className={`gsap-fade-in ${index < data.locationArray.length - 1 ? 'border-b' : ''} py-[20px]`} // Apply border-b class conditionally
                         >
                           {text}
                         </h6>

@@ -72,9 +72,9 @@ export default function AboutBringing() {
             key={key}
             style={{
               width: '408.16px',
-              height: '408.16px',
+              height: '370.16px',
               left: '270px',
-              borderRadius: '15.82px 0px 0px 0px',
+              borderRadius: '15px',
               marginRight: '3rem'
             }
 
