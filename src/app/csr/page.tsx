@@ -34,7 +34,7 @@ export default function CoDevelopment() {
         heading='Social initiatives and community engagement'
         subheading="A responsibility and commitment to social good"
         image=""
-        classes=""
+        classes="pb-0"
         video="/assets/about-us/banner.mp4"
       />
       <CommunityEngagement />

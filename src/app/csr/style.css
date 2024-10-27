@@ -437,16 +437,17 @@
 .custom-paragraph {
   font-family: 'Work Sans', sans-serif;
   /* Ensure you have imported this font */
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.01em;
   text-align: left;
+  color:rgb(176, 176, 176)
+
 }
 
 .bullet-list li {
-  font-family: 'Work Sans';
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 38px;
   letter-spacing: -0.02em;

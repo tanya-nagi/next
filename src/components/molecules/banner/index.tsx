@@ -18,7 +18,7 @@ export default function Banner({
 }: Props) {
   return (
     <div
-      className={`${classes} w-container blade-bottom-padding-lg lg:blade-bottom-padding-xl mt-10 xl:mt-14 2xl:mt-20`}
+      className={`w-container blade-bottom-padding-lg lg:blade-bottom-padding-xl mt-10 xl:mt-14 2xl:mt-20 ${classes} `}
     >
       <div className="banner-text-wrapper">
         <h2
@@ -49,9 +49,9 @@ export default function Banner({
             loop
             style={{
               width: "1651.94px",
-              height: "630px",
+              height: "430px",
               borderRadius: "2",
-              }}
+            }}
             playsInline
           >
             <source src={video} />

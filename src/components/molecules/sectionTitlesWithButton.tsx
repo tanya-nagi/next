@@ -58,25 +58,30 @@ export default function SectionTitlesWithButton({
             })}
             {boldParagraphs
               ? boldParagraphs.map((paragraph, index) => {
-                return (
-                  <h5
-                    key={index}
-                    className="max-w-lg mt-3 font-worksansMedium gsap-fade-in"
-                  >
-                    {paragraph}
-                  </h5>
-                );
-              })
+                  return (
+                    <h5
+                      key={index}
+                      className="max-w-lg mt-3 font-worksansMedium gsap-fade-in"
+                    >
+                      {paragraph}
+                    </h5>
+                  );
+                })
               : ""}
-            {
-              buttonText ? <div className="s"> <ButtonAtom
-                className="mt-7 font-worksansLight"
-                href="#"
-                text={buttonText}
-                theme="blue"
-                icon
-                size="lg"
-              /></div> : <ButtonLinkAtomWithTransparentColor
+            {buttonText ? (
+              <div className="s">
+                {" "}
+                <ButtonAtom
+                  className="mt-7 font-worksansLight"
+                  text={buttonText}
+                  theme="blue"
+                  icon
+                  size="lg"
+                  onClick={() => {}}
+                />
+              </div>
+            ) : (
+              <ButtonLinkAtomWithTransparentColor
                 className="mt-7 font-worksansLight"
                 href=""
                 text="AAK Global"
@@ -84,8 +89,7 @@ export default function SectionTitlesWithButton({
                 icon
                 size="lg"
               />
-            }
-
+            )}
           </div>
         </div>
       ) : (
@@ -112,15 +116,15 @@ export default function SectionTitlesWithButton({
             })}
             {boldParagraphs
               ? boldParagraphs.map((paragraph, index) => {
-                return (
-                  <h6
-                    key={index}
-                    className="font-worksansMedium text-center  gsap-fade-in"
-                  >
-                    {paragraph}
-                  </h6>
-                );
-              })
+                  return (
+                    <h6
+                      key={index}
+                      className="font-worksansMedium text-center  gsap-fade-in"
+                    >
+                      {paragraph}
+                    </h6>
+                  );
+                })
               : ""}
           </div>
         </div>
